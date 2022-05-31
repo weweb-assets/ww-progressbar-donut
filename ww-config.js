@@ -3,6 +3,13 @@ export default {
     label: {
       en: "Donut progress bar",
     },
+    customSettingsPropertiesOrder: ["value"],
+    customStylePropertiesOrder: [
+      "style",
+      ["thickness", "fillColor"],
+      ["emptyThickness", "emptyColor"],
+      ["animationDuration", "animationDelay"],
+    ],
   },
   properties: {
     value: {
