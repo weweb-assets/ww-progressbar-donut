@@ -1,5 +1,5 @@
 <template>
-  <div class="ww-progressbar-donut" ref="wwProgressDonut">
+  <div class="ww-progressbar-donut">
     <ve-progress
       :key="componentKey"
       :size="size"
@@ -68,7 +68,7 @@ export default {
     this.resizeObserver.disconnect();
   },
   mounted() {
-    const el = this.$refs.wwProgressDonut;
+    const el = this.$el;
     this.updateSize(el);
     this.resizeObserver = new ResizeObserver(() => {
       this.updateSize(el);
