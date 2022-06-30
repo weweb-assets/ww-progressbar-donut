@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     updateSize(el) {
-      this.elementHeight = this.getUnitValue(el.style.height);
+      this.elementHeight = el.getBoundingClientRect().height;
       this.componentKey += 1;
     },
     getUnitValue(unit) {
