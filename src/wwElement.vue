@@ -14,7 +14,7 @@
       empty-line-position="out 50"
       :animation="`default ${animation.duration} ${animation.delay}`"
     >
-      <wwLayout class="ww-progressbar-donut__content" path="container" />
+      <wwLayout class="content" path="container" />
     </ve-progress>
   </div>
 </template>
@@ -80,8 +80,18 @@ export default {
 
 <style lang="scss" scoped>
 .ww-progressbar-donut {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .content {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 </style>
