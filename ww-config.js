@@ -47,7 +47,7 @@ export default {
         en: "Line offset",
       },
       options: {
-        unitChoices: [{ value: "px", label: "px", min: 0, max: 100 }],
+        unitChoices: [{ value: "px", label: "px", min: 0, max: 50 }],
       },
       defaultValue: "20px",
     },
@@ -57,7 +57,7 @@ export default {
         en: "Thickness",
       },
       options: {
-        unitChoices: [{ value: "px", label: "px", min: 1, max: 1000 }],
+        unitChoices: [{ value: "px", label: "px", min: 1, max: 50 }],
       },
       defaultValue: "10px",
     },
@@ -67,7 +67,7 @@ export default {
         en: "Empty thickness",
       },
       options: {
-        unitChoices: [{ value: "px", label: "px", min: 1, max: 1000 }],
+        unitChoices: [{ value: "px", label: "px", min: 1, max: 50 }],
       },
       defaultValue: "10px",
     },
@@ -99,7 +99,7 @@ export default {
         en: "Animation duration",
       },
       options: {
-        unitChoices: [{ value: "ms", label: "ms", min: 1, max: 5000 }],
+        unitChoices: [{ value: "ms", label: "ms", min: 1, max: 999 }],
       },
       defaultValue: "400ms",
     },
@@ -109,7 +109,7 @@ export default {
         en: "Animation delay",
       },
       options: {
-        unitChoices: [{ value: "ms", label: "ms", min: 1, max: 5000 }],
+        unitChoices: [{ value: "ms", label: "ms", min: 1, max: 999 }],
       },
       defaultValue: "600ms",
     },
