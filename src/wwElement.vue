@@ -3,7 +3,7 @@
     <ve-progress
       :key="componentKey"
       :size="size"
-      :progress="content.value"
+      :progress="value"
       :color="content.fillColor"
       colorFill="white"
       :emptyColor="content.emptyColor"
@@ -26,6 +26,23 @@ export default {
   components: { VeProgress },
   props: {
     content: { type: Object, required: true },
+    uid: { type: String, required: true },
+    /* wwEditor:start */
+    wwEditorState: { type: Object, required: true },
+    /* wwEditor:end */
+  },
+  emits: ["trigger-event"],
+  setup(props) {
+    let val = parseInt(props.content.value);
+    if (isNaN(val)) val = 0;
+    const { value: variableValue, setValue } =
+      wwLib.wwVariable.useComponentVariable({
+        uid: props.uid,
+        name: "value",
+        type: "number",
+        defaultValue: val === undefined ? 0 : val,
+      });
+    return { variableValue, setValue };
   },
   data() {
     return {
@@ -35,6 +52,11 @@ export default {
     };
   },
   computed: {
+    value() {
+      let val = parseInt(this.variableValue);
+      if (isNaN(val)) return 0;
+      return val;
+    },
     size() {
       return this.elementHeight >= 0 ? this.elementHeight : 50;
     },
@@ -53,6 +75,19 @@ export default {
         delay: this.getUnitValue(this.content.animationDelay),
         duration: this.getUnitValue(this.content.animationDuration),
       };
+    },
+  },
+  watch: {
+    "content.value"(newValue) {
+      if (newValue === undefined) return;
+      newValue = parseInt(this.content.value);
+      if (isNaN(newValue)) newValue = 0;
+      if (newValue === this.value) return;
+      this.setValue(newValue);
+      this.$emit("trigger-event", {
+        name: "change",
+        event: { value: newValue },
+      });
     },
   },
   methods: {
