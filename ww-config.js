@@ -1,41 +1,35 @@
 export default {
   editor: {
-    label: {
-      en: "Donut progress bar",
-    },
+    label: "Donut progress bar",
     customSettingsPropertiesOrder: ["value"],
     customStylePropertiesOrder: [
       "style",
-      ["thickness", "fillColor"],
-      ["emptyThickness", "emptyColor"],
-      ["animationDuration", "animationDelay"],
+      ["fillInfo", "thickness", "fillColor"],
+      ["emptyInfo", "emptyThickness", "emptyColor"],
+      ["animationInfo", "animationDuration", "animationDelay"],
     ],
   },
   triggerEvents: [
-    { name: "change", label: { en: "On change" }, event: { value: "" } },
+    { name: "change", label: "On change", event: { value: "" } },
   ],
   properties: {
     value: {
       type: "Number",
-      label: {
-        en: "Value",
-      },
+      label: "Value",
       defaultValue: 65,
       bindable: true,
       section: "settings",
     },
     style: {
-      label: {
-        en: "Style",
-      },
+      label: "Style",
       type: "TextSelect",
       options: {
         options: [
-          { value: "center", label: { en: "Center" } },
-          { value: "out", label: { en: "Out" } },
-          { value: "out-over", label: { en: "Out over" } },
-          { value: "in", label: { en: "In" } },
-          { value: "in-over", label: { en: "In over" } },
+          { value: "center", label: "Center" },
+          { value: "out", label: "Out" },
+          { value: "out-over", label: "Out over" },
+          { value: "in", label: "In" },
+          { value: "in-over", label: "In over" },
         ],
       },
       defaultValue: "center",
@@ -43,29 +37,31 @@ export default {
     offset: {
       hidden: (content) => content.style !== "out" && content.style !== "in",
       type: "Length",
-      label: {
-        en: "Line offset",
-      },
+      label: "Line offset",
       options: {
         unitChoices: [{ value: "px", label: "px", min: 0, max: 50 }],
       },
       defaultValue: "20px",
     },
+    fillInfo: {
+      type: "Info",
+      label: "Fill",
+    },
     thickness: {
       type: "Length",
-      label: {
-        en: "Thickness",
-      },
+      label: "Thickness",
       options: {
         unitChoices: [{ value: "px", label: "px", min: 1, max: 50 }],
       },
       defaultValue: "10px",
     },
+    emptyInfo: {
+      type: "Info",
+      label: "Empty",
+    },
     emptyThickness: {
       type: "Length",
-      label: {
-        en: "Empty thickness",
-      },
+      label: "Thickness",
       options: {
         unitChoices: [{ value: "px", label: "px", min: 1, max: 50 }],
       },
@@ -73,10 +69,7 @@ export default {
     },
     fillColor: {
       type: "Color",
-      label: {
-        en: "Fill color",
-        fr: "Fill color",
-      },
+      label: "Color",
       options: {
         nullable: true,
       },
@@ -84,20 +77,19 @@ export default {
     },
     emptyColor: {
       type: "Color",
-      label: {
-        en: "Empty color",
-        fr: "Empty color",
-      },
+      label: "Color",
       options: {
         nullable: true,
       },
       defaultValue: "#f4f4f4",
     },
+    animationInfo: {
+      type: "Info",
+      label: "Animation",
+    },
     animationDuration: {
       type: "Length",
-      label: {
-        en: "Animation duration",
-      },
+      label: "Duration",
       options: {
         unitChoices: [{ value: "ms", label: "ms", min: 1, max: 999 }],
       },
@@ -105,9 +97,7 @@ export default {
     },
     animationDelay: {
       type: "Length",
-      label: {
-        en: "Animation delay",
-      },
+      label: "Delay",
       options: {
         unitChoices: [{ value: "ms", label: "ms", min: 1, max: 999 }],
       },
