@@ -11,6 +11,9 @@ export default {
       ["animationDuration", "animationDelay"],
     ],
   },
+  triggerEvents: [
+    { name: "change", label: { en: "On change" }, event: { value: "" } },
+  ],
   properties: {
     value: {
       type: "Number",
