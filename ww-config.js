@@ -9,9 +9,7 @@ export default {
       ["animationInfo", "animationDuration", "animationDelay"],
     ],
   },
-  triggerEvents: [
-    { name: "change", label: "On change", event: { value: "" } },
-  ],
+  triggerEvents: [{ name: "change", label: "On change", event: { value: "" } }],
   properties: {
     value: {
       type: "Number",
@@ -74,6 +72,7 @@ export default {
         nullable: true,
       },
       defaultValue: "#099AF2",
+      bindable: true,
     },
     emptyColor: {
       type: "Color",
@@ -82,6 +81,7 @@ export default {
         nullable: true,
       },
       defaultValue: "#f4f4f4",
+      bindable: true,
     },
     animationInfo: {
       type: "Info",
