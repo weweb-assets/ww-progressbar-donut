@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { computed } from "vue";
 import { VeProgress } from "vue-ellipse-progress";
 
 export default {
@@ -40,7 +41,7 @@ export default {
         uid: props.uid,
         name: "value",
         type: "number",
-        defaultValue: val === undefined ? 0 : val,
+        defaultValue: computed(() => val === undefined ? 0 : val),
       });
     return { variableValue, setValue };
   },
