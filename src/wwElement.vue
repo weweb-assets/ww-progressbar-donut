@@ -5,13 +5,10 @@
       :size="size"
       :progress="value"
       :color="`${content.fillColor}`"
-      colorFill="white"
       :emptyColor="`${content.emptyColor}`"
       :thickness="thickness"
       :emptyThickness="emptyThickness"
       :lineMode="`${content.style} ${offset}`"
-      line-position="out 50"
-      empty-line-position="out 50"
       :animation="`default ${animation.duration} ${animation.delay}`"
     >
       <wwLayout class="content" path="container" />
