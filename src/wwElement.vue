@@ -58,7 +58,7 @@ export default {
       return val;
     },
     size() {
-      return this.elementHeight >= 0 ? this.elementHeight : 50;
+      return this.elementHeight > 0 ? this.elementHeight : 50;
     },
     thickness() {
       return this.getUnitValue(this.content.thickness);
