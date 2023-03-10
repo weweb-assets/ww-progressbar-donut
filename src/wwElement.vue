@@ -5,13 +5,10 @@
       :size="size"
       :progress="value"
       :color="`${content.fillColor}`"
-      colorFill="white"
       :emptyColor="`${content.emptyColor}`"
       :thickness="thickness"
       :emptyThickness="emptyThickness"
       :lineMode="`${content.style} ${offset}`"
-      line-position="out 50"
-      empty-line-position="out 50"
       :animation="`default ${animation.duration} ${animation.delay}`"
     >
       <wwLayout class="content" path="container" />
@@ -61,7 +58,7 @@ export default {
       return val;
     },
     size() {
-      return this.elementHeight >= 0 ? this.elementHeight : 50;
+      return this.elementHeight > 0 ? this.elementHeight : 50;
     },
     thickness() {
       return this.getUnitValue(this.content.thickness);
