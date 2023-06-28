@@ -31,6 +31,9 @@ export default {
         ],
       },
       defaultValue: "center",
+      states: true,
+      responsive: true,
+      classes: true,
     },
     offset: {
       hidden: (content) => content.style !== "out" && content.style !== "in",
@@ -39,7 +42,9 @@ export default {
       options: {
         unitChoices: [{ value: "px", label: "px", min: 0, max: 50 }],
       },
-      defaultValue: "20px",
+      states: true,
+      responsive: true,
+      classes: true,
     },
     fillInfo: {
       type: "Info",
@@ -51,7 +56,9 @@ export default {
       options: {
         unitChoices: [{ value: "px", label: "px", min: 1, max: 50 }],
       },
-      defaultValue: "10px",
+      states: true,
+      responsive: true,
+      classes: true,
     },
     emptyInfo: {
       type: "Info",
@@ -63,7 +70,9 @@ export default {
       options: {
         unitChoices: [{ value: "px", label: "px", min: 1, max: 50 }],
       },
-      defaultValue: "10px",
+      states: true,
+      responsive: true,
+      classes: true,
     },
     fillColor: {
       type: "Color",
@@ -71,7 +80,9 @@ export default {
       options: {
         nullable: true,
       },
-      defaultValue: "#099AF2",
+      states: true,
+      responsive: true,
+      classes: true,
       bindable: true,
     },
     emptyColor: {
@@ -80,7 +91,9 @@ export default {
       options: {
         nullable: true,
       },
-      defaultValue: "#f4f4f4",
+      states: true,
+      responsive: true,
+      classes: true,
       bindable: true,
     },
     animationInfo: {
@@ -93,7 +106,9 @@ export default {
       options: {
         unitChoices: [{ value: "ms", label: "ms", min: 1, max: 999 }],
       },
-      defaultValue: "400ms",
+      states: true,
+      responsive: true,
+      classes: true,
     },
     animationDelay: {
       type: "Length",
@@ -101,7 +116,9 @@ export default {
       options: {
         unitChoices: [{ value: "ms", label: "ms", min: 1, max: 999 }],
       },
-      defaultValue: "600ms",
+      states: true,
+      responsive: true,
+      classes: true,
     },
     container: {
       hidden: true,
