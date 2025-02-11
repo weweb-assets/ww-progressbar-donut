@@ -39,7 +39,7 @@ Features:
 - Change event emission on value updates
 
 Example:
-{"tag":"ww-progressbar-donut","props":{"default":{"style":"center","value":65,"fillColor":"#22c55e","thickness":"8px","emptyColor":"#e2e8f0","animationDuration":"1500ms"}},"styles":{"default":{"width":"120px","height":"120px"}},"children":{"container":[{"tag":"ww-flexbox","name":"Container","styles":{"default":{"width":"100%","display":"flex","maxWidth":"940px","flexDirection":"column"}},"children":{"children":[{"tag":"ww-text","props":{"default":{"tag":"p","text":{"en":{"__wwtype":"f","defaultValue":"New","code":"'65%'"}}}},"styles":{"default":{"color":"#000000","fontSize":"18px","textAlign":"center","fontWeight":700}}},{"tag":"ww-text","props":{"default":{"tag":"p","text":{"en":"New"}}},"styles":{"default":{"color":"#64748b","fontSize":"14px","textAlign":"center"}}}]}}]}}
+{"tag":"ww-progressbar-donut","props":{"default":{"style":"center","value":65,"fillColor":"#22c55e","thickness":"8px","emptyColor":"#e2e8f0","animationDuration":"1500ms"}},"styles":{"default":{"width":"120px","height":"120px"}},"children":{"container":[{"tag":"ww-div","name":"Container","styles":{"default":{"width":"100%","display":"flex","maxWidth":"940px","flexDirection":"column"}},"children":{"children":[{"tag":"ww-text","props":{"default":{"tag":"p","text":{"en":{"__wwtype":"f","defaultValue":"New","code":"'65%'"}}}},"styles":{"default":{"color":"#000000","fontSize":"18px","textAlign":"center","fontWeight":700}}},{"tag":"ww-text","props":{"default":{"tag":"p","text":{"en":"New"}}},"styles":{"default":{"color":"#64748b","fontSize":"14px","textAlign":"center"}}}]}}]}}
 
 Events:
 - change: Triggered when value changes
