@@ -15,7 +15,7 @@ Renders a donut-shaped progress bar with customizable styles, colors, and animat
 - Dynamic updates through variable binding
 - Change event emission on value updates
 
-***Properties:**
+***Properties:***
 - value: number - Current progress value. Default: 65
 - style: 'center' | 'out' | 'out-over' | 'in' | 'in-over' - Progress bar style. Default: "center"
 - offset: string - Progress line offset from center (px). Visible with "out" or "in" style
@@ -27,7 +27,7 @@ Renders a donut-shaped progress bar with customizable styles, colors, and animat
 - animationDelay: string - Animation delay (ms)
 
 ***Slots:***
-- container: ww-text[] - Text array for progress value display
+- container: ww-text[] - Text array for progress value display (You can use the exposed variable to display the progress in the container)
 
 ***Events:***
 - change: Emitted when the progress value is updated. Payload: { value: number }
