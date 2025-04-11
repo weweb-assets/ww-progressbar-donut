@@ -27,7 +27,7 @@ Renders a donut-shaped progress bar with customizable styles, colors, and animat
 - animationDelay: string - Animation delay (ms)
 
 ***Slots:***
-- container: ww-text[] - Text array for progress value display (You can use the exposed variable to display the progress in the container)
+- container: ww-text[] - Text array for progress value display. Ex: {"uid":"progressbar_donut","tag":"ww-progressbar-donut","slots":{"container":[{"uid":"progress_text","tag":"ww-text","props":{"default":{"text":{"en":{"js":"return variables['progressbar_donut-value'"}}}}}]}}
 
 ***Events:***
 - change: Emitted when the progress value is updated. Payload: { value: number }
