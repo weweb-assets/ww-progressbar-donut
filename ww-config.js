@@ -12,7 +12,7 @@ export default {
     options: {
         displayAllowedValues: ["flex", "inline-flex"],
     },
-    triggerEvents: [{ name: "change", label: "On change", event: { value: "" }, description: "Run when the value changes." }],
+    triggerEvents: [{ name: "change", label: "On change", event: { value: "" }, description: "Run when the progress value changes." }],
     properties: {
         value: {
             type: "Number",
